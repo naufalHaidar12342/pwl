@@ -1,4 +1,4 @@
-<?
+<?php
     //define seperti assign variabel
     // di python (nama variabel = nilai/value/isinya)
     define ("NAMA", "Sutrisno ");
