@@ -33,14 +33,56 @@
     <!-- pilih operasi aritmatika -->
     <label for="operasiMath">operasi :</label>
     <select name="operasiMath" id="operasiMath">
-        <option value="">tambah(+)</option>
-        <option value="">kurang(-)</option>
-        <option value="">bagi(/)</option>
-        <option value="">kali(*)</option>
+        <option value="">Pilih operasi...</option>
+        <option value="+">tambah(+)</option>
+        <option value="-">kurang(-)</option>
+        <option value="/">bagi(/)</option>
+        <option value="*">kali(*)</option>
     </select>
 
-    <?php
+    <label for="hasil">Hasil : </label>
+    <input type="text" name="hasil" id="hasil" disabled value="<?php echo $hasil; ?>">
 
+    <?php
+    /* bagian di bawah terinspirasi dari
+    github fabiyudzaky*/ 
+    
+    // inisiasi membaca isi form
+    if(isset($_POST['operasiMath'])){
+        $operasiMath=$_POST['operasiMath'];
+    }
+
+    if(isset($_POST['bil_1'])){
+        $bil_1=$_POST['bil_1'];
+    }
+
+    if(isset($_POST['bil_2'])){
+        $bil_2=$_POST['bil_2'];
+    }
+
+
+
+    /* bagian di bawah membaca input dari user */
+    
+    if ($operasiMath=='+') {
+        $hasil= $bil_1 + $bil_2;
+    }
+    
+    if ($operasiMath=='-') {
+        $hasil= $bil_1 - $bil_2;
+    }
+    
+    if ($operasiMath=='*') {
+        $hasil= $bil_1 * $bil_2;
+    }
+    
+    if ($operasiMath=='/') {
+        $hasil= $bil_1 / $bil_2;
+    }
+
+    else {
+        $hasil=$hasil;
+    }
     ?>
 </body>
 </html>
