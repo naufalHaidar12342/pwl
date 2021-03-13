@@ -19,29 +19,34 @@
     </style>
 </head>
 <body>
-    <!-- bilangan pertama -->
-    <label for="bil_1">bil. pertama :</label>
-    <input type="text" name="bil_1" id="bil_1">
-    <br>
-    <br>
+    <form action="" method="post">
+        <!-- bilangan pertama -->
+        <label for="bil_1">bil. pertama :</label>
+        <input type="text" name="bil_1" id="bil_1">
+        <br>
+        <br>
 
-    <!-- bilangan kedua -->
-    <label for="bil_2">bil. kedua :</label>
-    <input type="text" name="bil_2" id="bil_2"><br>
-    <br>
+        <!-- bilangan kedua -->
+        <label for="bil_2">bil. kedua :</label>
+        <input type="text" name="bil_2" id="bil_2"><br>
+        <br>
 
-    <!-- pilih operasi aritmatika -->
-    <label for="operasiMath">operasi :</label>
-    <select name="operasiMath" id="operasiMath">
-        <option value="">Pilih operasi...</option>
-        <option value="+">tambah(+)</option>
-        <option value="-">kurang(-)</option>
-        <option value="/">bagi(/)</option>
-        <option value="*">kali(*)</option>
-    </select>
+        <!-- pilih operasi aritmatika -->
+        <label for="operasiMath">operasi :</label>
+        <select name="operasiMath" id="">
+            <option value="">Pilih operasi...</option>
+            <option value="+">tambah(+)</option>
+            <option value="-">kurang(-)</option>
+            <option value="/">bagi(/)</option>
+            <option value="*">kali(*)</option>
+        </select>
 
-    <label for="hasil">Hasil : </label>
-    <input type="text" name="hasil" id="hasil" disabled value="<? echo $hasil ; ?>">
+        <label for="hasil">Hasil : </label>
+        <? echo $hasil; ?>
+        <!-- <input type="text" name="hasil" value=""> -->
+    
+    </form>
+    
 
     <?
     /* bagian di bawah terinspirasi dari
