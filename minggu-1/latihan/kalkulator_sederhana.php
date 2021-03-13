@@ -53,31 +53,7 @@
     // inisiasi membaca isi form
         if(isset($_POST['operasiMath'])){
             $operasiMath=$_POST['operasiMath'];
-            if ($operasiMath=='+') {
-                $hasil= $bil_1 + $bil_2;
-                return $hasil;
-            }
-        
-            else if ($operasiMath=='-') {
-                $hasil= $bil_1 - $bil_2;
-                return $hasil;
-            }
-        
-            else if ($operasiMath=='*') {
-                $hasil= $bil_1 * $bil_2;
-                return $hasil;
-            }
-        
-            else if ($operasiMath=='/') {
-                $hasil= $bil_1 / $bil_2;
-                return $hasil;
-            }
-    
-            else {
-                $hasil=$hasil;
-                return $hasil;
-            }
-        }
+            
 
         if(isset($_POST['bil_1'])){
             $bil_1=$_POST['bil_1'];
@@ -86,7 +62,32 @@
         if(isset($_POST['bil_2'])){
             $bil_2=$_POST['bil_2'];
         }
+        
+        if ($operasiMath=='+') {
+            $hasil= $bil_1 + $bil_2;
+            return $hasil;
+        }
     
+        else if ($operasiMath=='-') {
+            $hasil= $bil_1 - $bil_2;
+            return $hasil;
+        }
+    
+        else if ($operasiMath=='*') {
+            $hasil= $bil_1 * $bil_2;
+            return $hasil;
+        }
+    
+        else if ($operasiMath=='/') {
+            $hasil= $bil_1 / $bil_2;
+            return $hasil;
+        }
+
+        else {
+            $hasil=$hasil;
+            return $hasil;
+        }
+    }
     /* bagian di bawah membaca input dari user */
     
         
