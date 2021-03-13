@@ -41,12 +41,15 @@
     </select>
 
     <label for="hasil">Hasil : </label>
-    <input type="text" name="hasil" id="hasil" disabled value="<?php echo $hasil; ?>">
+    <input type="text" name="hasil" id="hasil" disabled value="<? echo $hasil ; ?>">
 
-    <?php
+    <?
     /* bagian di bawah terinspirasi dari
     github fabiyudzaky*/ 
-    
+    $bil_1=0;
+    $bil_2=0;
+    $hasil=0;
+    $operasiMath=null;
     // inisiasi membaca isi form
         if(isset($_POST['operasiMath'])){
             $operasiMath=$_POST['operasiMath'];
