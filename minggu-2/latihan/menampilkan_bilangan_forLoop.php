@@ -27,14 +27,19 @@
     while ($patokan <= 5) {
         // echo "";
         // $patokan2=0;
-        echo "$patokan";
-        while ($patokan2<$patokan);
-        
-            echo "$patokan2";
+        while ($patokan2<=5){
+            echo "$patokan";
+            // echo "$patokan2";
             # code...
-            ++$patokan2;
-        ++$patokan;
+            ++$patokan;
+            echo $patokan2;
+            
+        ++$patokan2;  
+        
         echo "<br>";
+        }
+        
+            
     }
 
 ?>
