@@ -1,22 +1,30 @@
 <?php
+
+/*$patokan2 jika di deklarasikan
+di luar while yang pertama [ while($patokan<=5){} ] 
+, maka yang dihasilkan hanya 1-5 dari $patokan*/
     $patokan=1;
-    $patokan2=1;
+    // $patokan2=1;
     // $baris=5;
     while ($patokan <= 5) {
         // echo "";
         // $patokan2=0;
-        while ($patokan2<=5){
-            echo "$patokan";
+        // echo " ".$patokan;
+        echo "<br>";
+        $patokan2=1;
+        while ($patokan2<=$patokan){
+            echo $patokan;
+            // echo "patokan2= $patokan2";
             // echo "$patokan2";
             # code...
-            ++$patokan;
-            echo $patokan2;
+            ++$patokan2;
             
-        ++$patokan2;  
-        
-        echo "<br>";
+            // echo $patokan2;
+            // echo $patokan2;
+            
+         
         }
-        
+        ++$patokan;  
             
     }
 

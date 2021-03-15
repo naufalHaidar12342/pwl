@@ -21,7 +21,7 @@
 <body>
     <form action="" method="post">
         <!-- bilangan pertama -->
-        <label for="bil_1">bil. pertama :</label>
+        <label for="">bil. pertama :</label>
         <input type="text" name="bil_1" id="bil_1">
         <br>
         <br>
@@ -32,8 +32,8 @@
         <br>
 
         <!-- pilih operasi aritmatika -->
-        <label for="operasiMath">operasi :</label>
-        <select name="operasiMath" id="">
+        <label for="">operasi :</label>
+        <select name="operasiMath" id="operasiMath">
             <option value="">Pilih operasi...</option>
             <option value="+">tambah(+)</option>
             <option value="-">kurang(-)</option>
@@ -41,9 +41,9 @@
             <option value="*">kali(*)</option>
         </select>
 
+        <br>
         <label for="hasil">Hasil : </label>
-        <? echo $hasil; ?>
-        <!-- <input type="text" name="hasil" value=""> -->
+        <input type="text-area" name="hasil" disabled value="<?php echo $hasil;?>">
     
     </form>
     
@@ -51,11 +51,13 @@
     <?
     /* bagian di bawah terinspirasi dari
     github fabiyudzaky*/ 
-    $bil_1=0;
-    $bil_2=0;
-    $hasil=0;
-    $operasiMath=null;
-    // inisiasi membaca isi form
+    if ($_POST) {
+        $bil_1=0;
+        $bil_2=0;
+        $hasil=0;
+        $operasiMath=0;  
+        
+        // inisiasi membaca isi form
         if(isset($_POST['operasiMath'])){
             $operasiMath=$_POST['operasiMath'];
             
@@ -68,6 +70,9 @@
             $bil_2=$_POST['bil_2'];
         }
         
+        if (isset($_POST['hasil'])) {
+            $hasil=$_POST['hasil'];
+        }
         if ($operasiMath=='+') {
             $hasil= $bil_1 + $bil_2;
             return $hasil;
@@ -92,7 +97,10 @@
             $hasil=$hasil;
             return $hasil;
         }
+    }# code...
     }
+    
+    
     /* bagian di bawah membaca input dari user */
     
         
