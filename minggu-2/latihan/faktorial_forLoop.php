@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>faktorial dengan for loop</title>
+    <!-- sumber referensi : https://www.javatpoint.com/php-factorial-program -->
 </head>
 
 <body>
