@@ -81,11 +81,9 @@
     
     
     /* bagian di bawah membaca input dari user */
-    
         
     ?>
 
-    
     <form action="" method="post">
         <!-- bilangan pertama -->
         <label for="">bil. pertama :</label>
@@ -111,6 +109,7 @@
         <br>
         <!-- <label for="hasil">Hasil : </label> -->
         <input type="submit" name ="hasil" value="hasil"> <?php echo $hasil;?>
+    
     
     </form>
     
