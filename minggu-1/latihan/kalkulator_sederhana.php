@@ -1,5 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
+<!-- inspirasi untuk memperbaiki 
+program kalkulator :
+https://www.malasngoding.com/membuat-kalkulator-sederhana-dengan-php/
+ -->
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -19,72 +23,7 @@
     </style>
 </head>
 <body>
-
-<?php
-    /* bagian di bawah terinspirasi dari
-    github fabiyudzaky*/ 
-    
-        $bil_1=0;
-        $bil_2=0;
-        $hasil=0;
-        $operasiMath=0;  
-        
-        // inisiasi membaca isi form
-    if(isset($_POST['operasiMath'])){
-        $operasiMath=$_POST['operasiMath'];
-    }
-
-    if(isset($_POST['bil_1'])){
-        $bil_1=$_POST['bil_1'];
-    }
-
-    if(isset($_POST['bil_2'])){
-        $bil_2=$_POST['bil_2'];
-    }
-        
-    if (isset($_POST['hasil'])) {
-        $hasil=$_POST['hasil'];
-    }
-    else {
-        $i=1;
-    }
-    
-    if ($operasiMath=='+') {
-        $hasil= $bil_1 + $bil_2;
-        echo "hasilnya adalah ".$hasil;
-        // return $hasil;
-    }
-    else if ($operasiMath=='-') {
-        $hasil= $bil_1 - $bil_2;
-        echo "hasilnya adalah ".$hasil;
-        // return $hasil;
-    }
-    
-    else if ($operasiMath=='*') {
-        $hasil= $bil_1 * $bil_2;
-        echo "hasilnya adalah ".$hasil;
-        // return $hasil;
-    }
-    
-    else if ($operasiMath=='/') {
-        $hasil= $bil_1 / $bil_2;
-        echo "hasilnya adalah ".$hasil;
-        // return $hasil;
-    }
-
-
-    else {
-        $hasil=$hasil;
-        // echo "hasilnya adalah ".$hasil;
-    }
-    # code...
-    
-    
-    /* bagian di bawah membaca input dari user */
-        
-    ?>
-
-    <form action="" method="post">
+    <form action="" method="post" name="kalkulator">
         <!-- bilangan pertama -->
         <label for="">bil. pertama :</label>
         <input type="text" name="bil_1" id="bil_1">
@@ -108,13 +47,39 @@
 
         <br>
         <!-- <label for="hasil">Hasil : </label> -->
-        <input type="submit" name ="hasil" value="hasil"> <?php echo $hasil;?>
+        <input type="submit" name ="hasil" value="hasil">  
     
     
     </form>
+    <?php
     
+        if (isset($_POST['hasil'])) {
+            $operasiMath=$_POST['operasiMath'];
+            $bil_1=$_POST['bil_1'];
+            $bil_2=$_POST['bil_2'];
+            
+            switch ($operasiMath) {
+                case '+':
+                    $hasil=$bil_1+$bil_2;
+                    echo $hasil;
+                    break;
+                
+                case '-':
+                    $hasil=$bil_1-$bil_2;
+                    echo $hasil;
+                    break;
+                case '*':
+                    $hasil=$bil_1*$bil_2;
+                    echo $hasil;
+                    break;
+                case '/':
+                    $hasil=$bil_1/$bil_2;
+                    echo $hasil;
+                    break;
+            }   
+        }      
+    ?>   
 
-    
 </body>
 </html>
 
