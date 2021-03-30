@@ -25,6 +25,25 @@
         foreach ($arrayWarna as $pilihWarna){
             echo"apakah anda suka warna <font color=$pilihWarna>".$pilihWarna."</font>?<br>";
         }
+
+        /*output
+        
+        menampilkan array dengan for loop
+        apakah anda suka warna biru?
+        apakah anda suka warna hitam?
+        apakah anda suka warna merah?
+        apakah anda suka warna jingga?
+        apakah anda suka warna ungu?
+
+        menampilkan array dengan for each
+        apakah anda suka warna biru?
+        apakah anda suka warna hitam?
+        apakah anda suka warna merah?
+        apakah anda suka warna jingga?
+        apakah anda suka warna ungu?
+
+        
+        */
     ?>
 </body>
 
