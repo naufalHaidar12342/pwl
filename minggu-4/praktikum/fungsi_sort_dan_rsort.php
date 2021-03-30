@@ -40,10 +40,46 @@
 
         echo "<br>";
         rsort($arrayNilai);
-        echo"<b>array sebelum pengurutan</b>";
+        echo"<b>array setelah pengurutan dengan fungsi rsort()</b>";
         echo "<pre>";
         print_r($arrayNilai);
         echo "</pre>";
+
+        /*output
+        array sebelum pengurutan
+
+        Array
+        (
+            [john] => 70
+            [deanne] => 67
+            [max] => 78
+            [tony] => 55
+        )
+
+
+        array setelah pengurutan dengan fungsi sort()
+
+        Array
+        (
+            [0] => 55
+            [1] => 67
+            [2] => 70
+            [3] => 78
+        )
+
+
+        array setelah pengurutan dengan fungsi rsort()
+
+        Array
+        (
+            [0] => 78
+            [1] => 70
+            [2] => 67
+            [3] => 55
+        )
+
+
+        */
     ?>
 </body>
 
