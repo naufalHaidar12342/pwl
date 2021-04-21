@@ -28,9 +28,9 @@
                     <label for="jurusan"></label>
                     <select name="jurusan" id="jurusan" required>
                         <option value="">pilih jurusan...</option>
-                        <option value="Teknik_Informatika">Teknik Informatika</option>
-                        <option value="Sistem_Informasi">Sistem Informasi</option>
-                        <option value="Broadcast_Radio">Broadcasting</option>
+                        <option value="Teknik_Informatika_S1">Teknik Informatika S1</option>
+                        <option value="Sistem_Informasi_S1">Sistem Informasi</option>
+                        <option value="Teknik_Informatika_D3">Teknik Informasi D3</option>
                     </select>
                 </td>
             </tr>
