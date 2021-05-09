@@ -24,8 +24,6 @@
             echo ("Yah, loginnya gagal! username dan password kamu salah");
         } else if ($_GET['pesan-login'] == "logout") {
             echo ("Kamu berhasi logout. Sampai jumpa lagi, ya!");
-        } else if ($_GET['pesan-login'] == "belum-login") {
-            echo ("Kayaknya kamu belum login. Login dulu biar bisa ke halaman selanjutnya, ya!");
         }
     }
     ?>
