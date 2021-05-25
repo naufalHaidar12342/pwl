@@ -12,15 +12,15 @@ if (isset($_POST['kirim'])) {
 //untuk memeriksa apakah tombol submit
 //dari file 'edit.php' sudah ditekan
 if (isset($_POST['submit_edit'])) {
-    $id = $_POST['id'];
-    $nama = $_POST['nama'];
-    $alamat = $_POST['alamat'];
+    $id = $_GET['id'];
+    $nama = $_POST['nama-sekolah'];
+    $alamat = $_POST['alamat-sekolah'];
     $model = new Model();
     $model->update($id, $nama, $alamat);
     header('Location:menu-utama.php');
 }
-if (isset($_GET['id_sekolah'])) {
-    $id = $_GET['id_sekolah'];
+if (isset($_GET['id'])) {
+    $id = $_GET['id'];
     $model = new Model();
     $model->delete($id);
     header('Location:menu-utama.php');

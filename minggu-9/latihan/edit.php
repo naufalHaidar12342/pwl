@@ -1,5 +1,5 @@
 <?php
-$id = $_GET['id_sekolah'];
+$id = $_GET['id'];
 require 'model.php';
 
 $model = new Model();
@@ -19,18 +19,26 @@ $data = $model->edit($id);
 
 <body>
     <a href="menu-utama.php">Kembali</a>
-    <form action="proses.php?" method="post">
-        <label for="">Nama</label>
-        <br>
-        <input type="text" name="nama-sekolah" id="" value="<?php echo $data->nama; ?>">
+    <form action="proses.php?id=<?= $data->id_sekolah ?>" method="post">
+        <table>
+            <tr>
+                <td>Nama</td>
+                <td><input type="text" name="nama-sekolah" id="" value="<?php echo $data->nama; ?>"></td>
+            </tr>
+
+            <tr>
+                <td>Alamat</td>
+                <td><input type="text" name="alamat-sekolah" id="" value="<?php echo $data->alamat; ?>"></td>
+
+            </tr>
+
+            <tr>
+                <td><button type="submit" name="submit_edit">Submit</button></td>
+            </tr>
+        </table>
 
 
-        <label for="">Alamat</label>
-        <br>
-        <input type="text" name="alamat-sekolah" id="" value="<?php echo $data->alamat; ?>">
-        <br><br>
 
-        <button type="submit" name="submit_edit">Submit</button>
 
     </form>
 </body>

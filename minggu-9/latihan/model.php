@@ -43,7 +43,7 @@ class Model extends koneksi_database
 
     public function update($id, $nama, $alamat)
     {
-        $sql = "UPDATE sekolah_terdekat SET nama='$nama', alamat='$alamat' WHERE id='$id'";
+        $sql = "UPDATE sekolah_terdekat SET nama='$nama', alamat='$alamat' WHERE id_sekolah='$id'";
         $this->connectDB->query($sql);
     }
 

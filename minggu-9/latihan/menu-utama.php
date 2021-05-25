@@ -45,9 +45,9 @@ $index = 1;
                         <td><?= $data->nama ?></td>
                         <td><?= $data->alamat ?></td>
                         <td>
-                            <a name="edit" id="edit" href="edit.php?nama=<?= $data->nama ?>">Edit</a>
+                            <a name="edit" id="edit" href="edit.php?id=<?= $data->id_sekolah ?>">Edit</a>
 
-                            <a name="hapus" id="hapus" href="proses.php?nama=<?= $data->nama ?>">Hapus</a>
+                            <a name="hapus" id="hapus" href="proses.php?id=<?= $data->id_sekolah ?>">Hapus</a>
                         </td>
                     </tr>
                 <?php endforeach;
