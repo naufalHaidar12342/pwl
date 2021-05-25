@@ -47,9 +47,9 @@ class Model extends koneksi_database
         $this->connectDB->query($sql);
     }
 
-    public function delete($nama)
+    public function delete($id)
     {
-        $sql = "DELETE FROM sekolah_terdekat WHERE nama='$nama'";
+        $sql = "DELETE FROM sekolah_terdekat WHERE id_sekolah='$id'";
         $this->connectDB->query($sql);
     }
 }

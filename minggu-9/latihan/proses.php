@@ -8,6 +8,9 @@ if (isset($_POST['kirim'])) {
     $model->insert($nama, $alamat);
     header('Location:menu-utama.php');
 }
+
+//untuk memeriksa apakah tombol submit
+//dari file 'edit.php' sudah ditekan
 if (isset($_POST['submit_edit'])) {
     $id = $_POST['id'];
     $nama = $_POST['nama'];
@@ -16,8 +19,8 @@ if (isset($_POST['submit_edit'])) {
     $model->update($id, $nama, $alamat);
     header('Location:menu-utama.php');
 }
-if (isset($_GET['nama-sekolah'])) {
-    $id = $_GET['nama-sekolah'];
+if (isset($_GET['id_sekolah'])) {
+    $id = $_GET['id_sekolah'];
     $model = new Model();
     $model->delete($id);
     header('Location:menu-utama.php');
