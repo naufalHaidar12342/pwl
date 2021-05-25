@@ -1,9 +1,10 @@
 <?php
 //memanggil file daftar-sekolah
-require 'daftar-sekolah.php';
+require 'model.php';
 
 //mengakses class koneksi-database
-$aksesDaftar = new koneksi_database();
+$aksesModel = new Model();
+$index = 1;
 
 ?>
 
@@ -20,40 +21,51 @@ $aksesDaftar = new koneksi_database();
 </head>
 
 <body>
-    <form action="" method="post">
-        <table>
-
+    <a href="tambah-data.php">Masukkan data baru</a>
+    <br><br>
+    <table>
+        <thead>
             <tr>
                 <th>Nomer</th>
                 <th>Nama Sekolah</th>
                 <th>Alamat Sekolah</th>
             </tr>
 
+
+        </thead>
+
+        <!--  -->
+        <tbody>
             <?php
-            $no = 1;
-            foreach ($aksesDaftar->tampilkanData() as $x) {
+            $hasil = $aksesModel->tampil_data();
+            if (!empty($hasil)) {
+                foreach ($hasil as $data) : ?>
+                    <tr>
+                        <td><?= $index++ ?></td>
+                        <td><?= $data->nama ?></td>
+                        <td><?= $data->alamat ?></td>
+                        <td>
+                            <a name="edit" id="edit" href="edit.php?nama=<?= $data->nama ?>">Edit</a>
 
-
-            ?>
+                            <a name="hapus" id="hapus" href="proses.php?nama=<?= $data->nama ?>">Hapus</a>
+                        </td>
+                    </tr>
+                <?php endforeach;
+            } else {
+                ?>
                 <tr>
-                    <td><?php echo $no++; ?></td>
-                    <td><?php echo $x['nama']; ?></td>
-                    <td><?php echo $x['alamat'] ?></td>
-                    <td>
-                        <a href="edit.php?id=<?php echo $x['id']; ?>&aksi=update">Update</a>
-                        <a href="proses.php?id=<?php echo $x['id']; ?>&aksi=hapus">Hapus</a>
-                    </td>
+                    <td colspan="9">belum ada data pada tabel 'sekolah_terdekat'</td>
                 </tr>
-            <?php
-            }
-            ?>
 
-        </table>
+            <?php } ?>
 
+        </tbody>
 
 
-    </form>
-    <a href="tambah-data.php">Masukkan data baru</a>
+    </table>
+
+
+
 </body>
 
 </html>

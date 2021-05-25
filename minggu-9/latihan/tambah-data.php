@@ -10,7 +10,9 @@
 </head>
 
 <body>
-    <form action="proses.php?aksi=tambah" method="post">
+    <h3>Tambah data</h3>
+    <a href="menu-utama.php">Kembali</a>
+    <form action="proses.php" method="post">
         <table>
             <tr>
                 <td>Nama</td>
@@ -23,7 +25,8 @@
             </tr>
 
             <tr>
-                <td><input type="submit" value="kirim"></td>
+                <td><input type="submit" name="kirim" value="kirim"></td>
+                <td><input type="reset" value="reset"></td>
             </tr>
         </table>
 

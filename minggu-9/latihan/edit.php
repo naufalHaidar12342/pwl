@@ -1,7 +1,9 @@
 <?php
-require 'daftar-sekolah.php';
+$id = $_GET['id_sekolah'];
+require 'model.php';
 
-$akses = new koneksi_database();
+$model = new Model();
+$data = $model->edit($id);
 ?>
 
 
@@ -16,30 +18,20 @@ $akses = new koneksi_database();
 </head>
 
 <body>
-    <form action="proses.php?aksi=update" method="post">
-        <?php
-        foreach ($akses->edit($_GET['id']) as $d) {;
-        ?>
-            <table>
-                <tr>
-                    <td>Nama Sekolah</td>
-                    <td>
-                        <input type="hidden" name="id" value="<?php echo $d['id']; ?>">
-                        <input type="text" name="nama-sekolah" value="<?php echo $d['nama-sekolah']; ?>">
-                    </td>
+    <a href="menu-utama.php">Kembali</a>
+    <form action="proses.php?" method="post">
+        <label for="">Nama</label>
+        <br>
+        <input type="text" name="nama-sekolah" id="" value="<?php echo $data->nama; ?>">
 
-                </tr>
 
-                <tr>
-                    <td>Alamat Sekolah</td>
-                    <td><input type="text" name="alamat-sekolah" id=""></td>
-                </tr>
+        <label for="">Alamat</label>
+        <br>
+        <input type="text" name="alamat-sekolah" id="" value="<?php echo $data->alamat; ?>">
+        <br><br>
 
-                <tr>
-                    <td><input type="submit" value="kirim"></td>
-                </tr>
-            </table>
-        <?php } ?>
+        <button type="submit" name="submit_edit">Submit</button>
+
     </form>
 </body>
 
