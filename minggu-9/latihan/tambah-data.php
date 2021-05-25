@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah data</title>
-    <!-- <link rel="stylesheet" href="css/styling.css"> -->
+    <link rel="stylesheet" href="css/styling.css">
 </head>
 
 <body>
@@ -25,8 +25,10 @@
             </tr>
 
             <tr>
-                <td><input type="submit" name="kirim" value="kirim"></td>
-                <td><input type="reset" value="reset"></td>
+                <td></td>
+                <td><input type="submit" name="kirim" value="kirim">
+                    <input type="reset" value="reset">
+                </td>
             </tr>
         </table>
 
