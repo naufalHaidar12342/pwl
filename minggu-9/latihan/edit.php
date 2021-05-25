@@ -3,7 +3,7 @@ $id = $_GET['id'];
 require 'model.php';
 
 $model = new Model();
-$data = $model->edit($id);
+$data = $model->find($id);
 ?>
 
 
@@ -19,9 +19,16 @@ $data = $model->edit($id);
 
 <body>
     <a href="menu-utama.php">Kembali</a>
-    <form action="proses.php?id=<?= $data->id_sekolah ?>" method="post">
+    <form action="proses.php?" method="post">
         <table>
+
             <tr>
+                <td>
+                <td><input type="hidden" name="id" value="<?= $data->id_sekolah ?>"></td>
+                </td>
+            </tr>
+            <tr>
+
                 <td>Nama</td>
                 <td><input type="text" name="nama-sekolah" id="" value="<?php echo $data->nama; ?>"></td>
             </tr>

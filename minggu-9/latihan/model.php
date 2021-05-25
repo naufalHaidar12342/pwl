@@ -30,7 +30,7 @@ class Model extends koneksi_database
     }
 
 
-    public function edit($id)
+    public function find($id)
     {
         $sql = "SELECT * FROM sekolah_terdekat WHERE id_sekolah='$id'";
         $bind = $this->connectDB->query($sql);
