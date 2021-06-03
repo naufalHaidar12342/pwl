@@ -17,6 +17,7 @@ h3 {
   letter-spacing: 1px;
   padding: 30px 0;
 }
+
 /* override attribut tertentu 
 untuk google material icons  */
 .user {
@@ -65,7 +66,10 @@ untuk google material icons  */
   transform: translateY(2px);
   margin-right: 4px;
 }
-/* akhir bagian google material icons */
+/* akhir bagian override attribut tertentu 
+untuk google material icons  */
+
+/* ================================== */
 
 /* thanks to mr federico dossena for his
 idea on responsive button:
@@ -171,18 +175,8 @@ button.reset-data:hover {
   color: #f8f8f8;
   background-color: #3d977c;
 }
-input.input-nama {
-  /* background-color: #f8f8f8; */
-  background: 0 0;
-  height: 62px;
-  border: 0;
-  padding: 0 20px 0 58px;
-}
-
-input.input-nama:focus {
-  outline: none;
-}
-
+/* stylr button saat layar mengecil
+30 em=480px */
 @media all and(max-width:30em) {
   a.custom-button {
     display: block;
@@ -197,6 +191,36 @@ input.input-nama:focus {
     margin: 0.4em auto;
   }
 }
+
+/* akhir dari button */
+
+/* styling untuk input pada 
+add.php */
+input.input-nama {
+  /* background-color: #f8f8f8; */
+  background: 0 0;
+  height: 62px;
+  border: 0;
+  padding: 0 20px 0 58px;
+}
+
+input.input-nama:focus {
+  outline: none;
+}
+
+input.input-sekolah {
+  background: 0 0;
+  height: 62px;
+  border: 0;
+  padding: 0 20px 0 58px;
+}
+
+input.input-sekolah:focus {
+  outline: none;
+}
+/* akhir styling untuk input pada 
+add.php */
+
 /* thanks to  : https://codepen.io/florantara/pen/dROvdb 
 for his/her design on responsive table*/
 .tabble-wrapper {

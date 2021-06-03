@@ -23,16 +23,30 @@ $data = $model->findRecord($id);
 <body>
     <h3>Edit data sekolah yang ada</h3>
 
-    <a href="../view/home.php" class="">Kembali</a>
+    <a href="../view/home.php" class="custom-button">
+        <span class="material-icons-outlined">
+            undo
+        </span>
+        Kembali
+    </a>
 
-    <form action="proses.php?" method="post">
+    <form action="../controller/controls.php" method="post">
         <div class="table-wrapper">
             <table class="custom-table">
                 <input type="hidden" name="id" value="<?= $data->id_sekolah ?>">
                 <thead>
-                    <th>Nama Sekolah</th>
-                    <th>Alamat Sekolah</th>
-                    <th>Aksi</th>
+                    <th>
+                        Nama Sekolah
+                    </th>
+
+                    <th>
+                        Alamat Sekolah
+                    </th>
+
+                    <th>
+                        Aksi
+                    </th>
+
                 </thead>
 
                 <tbody>
@@ -50,10 +64,10 @@ $data = $model->findRecord($id);
                         </td>
 
                         <td>
-                            <button type="submit" class="submit-button" name="submit_edit" value="kirim">Submit
+                            <button type="submit" class="kirim-data" name="submit_edit" value="kirim">Submit
                             </button>
 
-                            <button type="reset" name="reset">Reset
+                            <button type="reset" name="reset" class="reset-data">Reset
                             </button>
                         </td>
 

@@ -80,7 +80,7 @@ $index = 1;
 
 
 
-                                <a href="../models/proses.php?=<?= $data->id_sekolah ?>" name="hapus" id="hapus" class="hapus-button">
+                                <a href="../controller/controls.php?id=<?= $data->id_sekolah ?>" name="hapus" id="hapus" class="hapus-button">
                                     <span class="material-icons-outlined trash">
                                         delete
                                     </span>Hapus</a>

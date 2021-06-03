@@ -19,14 +19,23 @@
         </span>
         Kembali
     </a>
-    <form action="../models/proses.php" method="post">
+    <form action="../controller/controls.php" method="post">
         <div class="table-wrapper">
             <table class="custom-table">
                 <thead>
                     <th>
-                        <span class="material-icons-outlined edit">perm_identity</span>Isi Nama Sekolah
+                        <span class="material-icons-outlined edit">
+                            perm_identity
+                        </span>
+                        Isi Nama Sekolah
                     </th>
-                    <th>Isi Alamat Sekolah</th>
+
+                    <th>
+                        <span class="material-icons-outlined place">
+                            place
+                        </span>
+                        Isi Alamat Sekolah
+                    </th>
                     <th>
                         <span class="material-icons-outlined settings">
                             settings

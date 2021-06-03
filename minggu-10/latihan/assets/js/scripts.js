@@ -1,3 +1,1 @@
-function tombol() {
-    
-}
+confirm("Yakin ingin menghapus record ini?")
