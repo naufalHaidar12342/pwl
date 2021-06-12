@@ -6,13 +6,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tambah data</title>
+
+    <!-- lokasi css -->
     <link rel="stylesheet" href="../assets/css/styling.css">
+
+    <!--  -->
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
     <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" />
 </head>
 
 <body>
     <h3>Tambah Sekolah</h3>
+
+    <!-- tombol kembali menuju home.
+        menggunakan material icon dari google 
+        sebagai simbolnya
+     -->
     <a href="../view/home.php" class="custom-button">
         <span class="material-icons-outlined">
             undo
@@ -61,8 +70,6 @@
                         </td>
                     </tr>
                 </tbody>
-
-
 
             </table>
         </div>

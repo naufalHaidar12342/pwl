@@ -18,8 +18,13 @@ h3 {
   padding: 30px 0;
 }
 
+/* styling dialog box tipe confirm */
+
+/* akhir dari dialog box */
+
 /* override attribut tertentu 
 untuk google material icons  */
+
 .user {
   font-size: 2rem !important;
   color: #999 !important;
@@ -45,6 +50,7 @@ untuk google material icons  */
   transform: translateY(2px) !important;
   margin-right: 3px;
 }
+
 .number-list {
   font-size: 16px;
   transform: translateY(2px);
@@ -56,16 +62,19 @@ untuk google material icons  */
   transform: translateY(2px);
   margin-right: 4px;
 }
+
 .home {
   font-size: 17px;
   transform: translateY(2px);
   margin-right: 2px;
 }
+
 .edit {
   font-size: 16px;
   transform: translateY(2px);
   margin-right: 4px;
 }
+
 /* akhir bagian override attribut tertentu 
 untuk google material icons  */
 
@@ -77,6 +86,7 @@ https://fdossena.com/?p=html5cool/buttons/i.frag*/
 
 /* button untuk kembali 
 ke menu utama*/
+
 a.custom-button {
   display: inline-block;
   padding: 0.7em 1.4em;
@@ -92,10 +102,12 @@ a.custom-button {
   text-align: center;
   position: relative;
 }
+
 a.custom-button:hover {
   color: #f8f8f8;
   background-color: #4774a1c7;
 }
+
 a.edit-button {
   display: inline-block;
   padding: 0.7em 1.4em;
@@ -111,11 +123,13 @@ a.edit-button {
   text-align: center;
   position: relative;
 }
+
 a.edit-button:hover {
   color: #f8f8f8;
   background-color: #3d977c;
 }
-a.hapus-button {
+
+.hapus-button {
   display: inline-block;
   padding: 0.7em 1.4em;
   margin: 0 0.3em 0.3em 0;
@@ -123,23 +137,31 @@ a.hapus-button {
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 400;
+  font-size: 16px;
   text-transform: uppercase;
   color: #ffffff;
   background-color: #c34f4fe7;
   box-shadow: inset 0 -0.6em 0 -0.35em rgba(0, 0, 0, 0.17);
   text-align: center;
   position: relative;
+  outline: none;
+  border: none;
+  cursor: pointer;
 }
-a.hapus-button:hover {
+
+.hapus-button:hover {
   color: #f8f8f8;
   background-color: #903939e7;
 }
+
 button.kirim-data {
   max-width: 40%;
   display: inline-block;
   padding: 0.7em 1.4em;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.15em;
+  border: none;
+  outline: none;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 400;
@@ -150,16 +172,20 @@ button.kirim-data {
   text-align: center;
   position: relative;
 }
+
 button.kirim-data:hover {
   cursor: pointer;
   color: #f8f8f8;
   background-color: #4774a1c7;
 }
+
 button.reset-data {
   display: inline-block;
   padding: 0.7em 1.4em;
   margin: 0 0.3em 0.3em 0;
   border-radius: 0.15em;
+  border: none;
+  outline: none;
   box-sizing: border-box;
   text-decoration: none;
   font-weight: 400;
@@ -170,13 +196,16 @@ button.reset-data {
   text-align: center;
   position: relative;
 }
+
 button.reset-data:hover {
   cursor: pointer;
   color: #f8f8f8;
   background-color: #3d977c;
 }
+
 /* stylr button saat layar mengecil
 30 em=480px */
+
 @media all and(max-width:30em) {
   a.custom-button {
     display: block;
@@ -196,6 +225,7 @@ button.reset-data:hover {
 
 /* styling untuk input pada 
 add.php */
+
 input.input-nama {
   /* background-color: #f8f8f8; */
   background: 0 0;
@@ -218,11 +248,13 @@ input.input-sekolah {
 input.input-sekolah:focus {
   outline: none;
 }
+
 /* akhir styling untuk input pada 
 add.php */
 
 /* thanks to  : https://codepen.io/florantara/pen/dROvdb 
 for his/her design on responsive table*/
+
 .tabble-wrapper {
   margin: 10px 70px 70px;
   box-shadow: 0px 35px 50px rgba(0, 0, 0, 0.2);
@@ -258,6 +290,7 @@ for his/her design on responsive table*/
 .custom-table td button {
   width: 30%;
 }
+
 .custom-table thead th {
   color: #ffff;
   background: #4fc3a1;
@@ -279,7 +312,6 @@ for his/her design on responsive table*/
     display: block;
     width: 100%;
   }
-
   .tabble-wrapper::before {
     content: "scroll secara horizontal";
     display: block;
@@ -288,7 +320,6 @@ for his/her design on responsive table*/
     color: white;
     padding: 0 0 10px;
   }
-
   .custom-table thead,
   .custom-table tbody,
   .custom-table thead th {
@@ -297,17 +328,14 @@ for his/her design on responsive table*/
   .custom-table thead th:last-child {
     border-bottom: none;
   }
-
   .custom-table thead {
     float: left;
   }
-
   .custom-table tbody {
     width: auto;
     position: relative;
     overflow-x: auto;
   }
-
   .custom-table td,
   .custom-table th {
     padding: 20px 0.625em 0.625em 0.625em;
@@ -320,20 +348,16 @@ for his/her design on responsive table*/
     font-size: 13px;
     text-overflow: ellipsis;
   }
-
   .custom-table thead th {
     text-align: left;
     border-bottom: 1px solid #f7f7f9;
   }
-
   .custom-table tbody tr {
     display: table-cell;
   }
-
   .custom-table tbody tr:nth-child(odd) {
     background: none;
   }
-
   .custom-table tr:nth-child(even) {
     background: transparent;
   }
