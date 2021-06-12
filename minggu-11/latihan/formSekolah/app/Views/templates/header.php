@@ -17,74 +17,10 @@
     <!-- css -->
     <!-- <link rel="stylesheet" href="../assets/css/styling.css"> -->
     <!--  -->
-    <style>
-        .wrapper {
-            position: fixed;
-            width: 500px;
-            max-width: 80%;
-            transform: translate(-50%, -50%);
-            background: white;
-            z-index: 10;
-            top: 50%;
-            left: 50%;
-            display: none;
-            border: 1px solid black;
-            border-radius: 8px;
-        }
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
 
-
-
-        .wrapper .confirm-box {
-            padding: 10px 15px;
-            width: 350px;
-            padding: 2rem 1rem;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-
-        .wrapper .confirm-header {
-            padding: 10px 15px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-        }
-
-        .confirm-header .header-title {
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-        .confirm-header .close-button {
-            cursor: pointer;
-            border: none;
-            outline: none;
-            background: none;
-            font-size: 1.1rem;
-            font-weight: bold;
-        }
-
-        #overlay {
-            position: fixed;
-            opacity: 0;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background-color: rgba(0, 0, 0, 0.5);
-            pointer-events: none;
-        }
-
-        #overlay.active {
-            opacity: 1;
-            pointer-events: all;
-        }
-
-        .wrapper.open {
-            display: flex;
-        }
-    </style>
+    <link href="https://cdn.datatables.net/1.10.25/css/jquery.dataTables.min.css" rel="stylesheet">
+    <link href="https://cdn.datatables.net/1.10.25/css/dataTables.bootstrap5.min.css" rel="stylesheet">
 
 </head>
 

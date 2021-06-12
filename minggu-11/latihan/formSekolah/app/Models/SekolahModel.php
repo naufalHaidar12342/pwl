@@ -4,7 +4,7 @@ namespace App\Models;
 
 use CodeIgniter\Model;
 
-class SekolahTerdekatModel extends Model
+class SekolahModel extends Model
 {
     protected $table      = 'sekolah_terdekat';
 
