@@ -14,13 +14,13 @@ class Home extends BaseController
 		if (!is_file(APPPATH . '/Views/inventarisasi/' . $page . '.php')) {
 			// Whoops, we don't have a page for that!
 			throw new \CodeIgniter\Exceptions\PageNotFoundException($page);
+		} else {
+			// $data['title'] = ucfirst($page); // Capitalize the first letter
+			$data = 0;
+			echo view('templates/header');
+			echo "hello world";
+			// echo view('inventarisasi/' . $page, $data);
+			echo view('templates/footer');
 		}
-
-		// $data['title'] = ucfirst($page); // Capitalize the first letter
-		$data = 0;
-		echo view('templates/header');
-		echo "hello world";
-		// echo view('inventarisasi/' . $page, $data);
-		echo view('templates/footer');
 	}
 }
