@@ -17,10 +17,9 @@ class Home extends BaseController
 		}
 
 		// $data['title'] = ucfirst($page); // Capitalize the first letter
-		$data = 0;
+		// $data = null;
 		echo view('templates/header');
-		echo "hello world";
-		// echo view('inventarisasi/' . $page, $data);
+		echo view('inventarisasi/'.$page);
 		echo view('templates/footer');
 	}
 }
