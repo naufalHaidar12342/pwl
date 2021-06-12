@@ -19,7 +19,7 @@ class Home extends BaseController
 			$data = null;
 			echo view('templates/header');
 			// echo "hello world";
-			echo view('inventarisasi/' . $page, $data);
+			echo view('inventarisasi/'.$page);
 			echo view('templates/footer');
 		}
 	}
