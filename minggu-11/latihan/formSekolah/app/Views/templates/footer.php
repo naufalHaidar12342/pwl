@@ -6,6 +6,6 @@
         $('#data-table').DataTable();
     } );
 </script>
-</body>
+</body> 
 
 </html>

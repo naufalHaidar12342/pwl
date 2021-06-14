@@ -2,14 +2,29 @@
 
 namespace App\Controllers;
 
-
-// use CodeIgniter\Controller;
+use App\Models\DaftarSekolahModel;
 
 class Home extends BaseController
 {
+	protected $koneksiDB;
+
+	public function __construct()
+	{
+		$this->koneksiDB = new DaftarSekolahModel();
+	}
+
 	public function index()
 	{
-		return view('welcome_message');
+		// return view('welcome_message');
+
+		// $ambil = $this->koneksiDB->findAll();
+
+		//sekolah_terdekat disini adalah nama tabel
+		//yang kita pilih sebelumnya
+		// $data = [
+		// 	'sekolah_terdekat' => $ambil
+		// ];
+		return view('halaman_utama');
 	}
 
 	// public function view($page = 'home')
@@ -31,8 +46,8 @@ class Home extends BaseController
 	// 	// echo view('templates/footer');
 	// }
 
-	public function frontPage()
+	public function addData()
 	{
-		return view('halaman_utama');
+		return view('tambah_data');
 	}
 }

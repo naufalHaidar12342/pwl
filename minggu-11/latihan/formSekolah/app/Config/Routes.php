@@ -33,7 +33,18 @@ $routes->setAutoRoute(true);
 // route since we don't have to scan directories.
 $routes->get('/', 'Home::index');
 
+//ps : mencoba mengalihkan ke halaman kita
+//dengan menjadikan route bawaan sebagai komentar
 
+
+//mencoba menampilkan halaman utama milik kita
+// $routes->get('/', 'Home::frontPage');
+
+//menambah data
+// $routes->get('/tambah_data', 'Traffic::addData');
+
+//kembali ke halaman utama
+// $routes->get('/halaman_utama', 'Traffic::returnHome');
 /*
  * --------------------------------------------------------------------
  * Additional Routing

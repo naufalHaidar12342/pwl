@@ -272,6 +272,9 @@ for his/her design on responsive table*/
   background-color: whitesmoke;
 }
 
+.custom-table > tr > * {
+  vertical-align: middle;
+}
 .custom-table td,
 .custom-table th {
   text-align: center;

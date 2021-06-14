@@ -164,18 +164,12 @@ untuk mengakses fungsi showRecord()-->
             </thead>
 
             <tbody>
-                <?php
-
-                $panggil = model('App\Models\DaftarSekolahModel');
-
-                $tampilkan = $panggil->findAll();
-                $index = 1; ?>
-
-                <?php foreach ($tampilkan as $shows) : ?>
+                <?php $index = 1; ?>
+                <?php foreach ($sekolah_terdekat as $list) : ?>
                     <tr>
-                        <td><?= $index++; ?></td>
-                        <td><?= $shows['nama']; ?></td>
-                        <td><?= $shows['alamat']; ?></td>
+                        <td><?= $index++;  ?></td>
+                        <td><?= $list['nama']; ?></td>
+                        <td><?= $list['alamat']; ?></td>
                         <td>
                             <!-- tombol edit -->
                             <a href="" class="edit-button" name="edit" id="edit">
@@ -194,8 +188,8 @@ untuk mengakses fungsi showRecord()-->
                             </button>
                         </td>
                     </tr>
-                <?php endforeach; ?>
             </tbody>
+        <?php endforeach; ?>
 
         </table>
     </div>
@@ -203,3 +197,18 @@ untuk mengakses fungsi showRecord()-->
 </body>
 
 </html>
+<?php
+
+$panggil = model('App\Models\DaftarSekolahModel');
+
+$tampilkan = $panggil->findAll();
+$index = 1; ?>
+
+<?php foreach ($tampilkan as $tampil) : ?>
+    <tr>
+        <td><?= $index++; ?></td>
+        <td><?= $tampil['nama'] ?></td>
+        <td><?= $tampil['alamat'] ?></td>
+
+    </tr>
+<?php endforeach; ?>
